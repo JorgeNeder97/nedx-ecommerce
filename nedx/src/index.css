@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-mainImage bg-fixed bg-mainSize bg-right text-secondary font-primary text-[17px] leading-8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply text-primary leading-[120%];
+}
+
+h1 {
+    @apply text-[36px] lg:text-[64px] font-semibold;
+}
+
+h2 {
+    @apply text-[30px] lg:text-[44px] font-semibold capitalize tracking-[0.44px]; 
+}
+
+h3 {
+    @apply text-[20px] lg:text-[26px] font-semibold;
+}
+
+h4 {
+    @apply text-[20px] lg:text-[26px] font-semibold capitalize;
+}
+
+.btn {
+    @apply rounded-full uppercase tracking-[1.02px] flex items-center justify-center
+    transition-all;
+}
+
+.btn-sm {
+    @apply h-14 px-10;
+}
+
+.btn-lg {
+    @apply h-16 px-[50px];
+}
+
+.btn-accent {
+    @apply bg-accent text-white hover:bg-accent-tertiary;
+}
+
+.btn-white {
+    @apply bg-white text-secondary hover:bg-white/90;
+}
+
+.btn-outline {
+    @apply bg-transparent border-2 border-accent text-secondary hover:bg-accent
+    hover:border-transparent hover:text-white;
+}
+
+.input,
+.select {
+    @apply w-full rounded-[10px] h-[66px] outline-none border border-[#dfdfdf]
+    text-secondary font-light placeholder:font-light placeholder:text-secondary;
+}
+
+.input {
+    @apply px-4;
+}
+
+.section {
+    @apply py-12 lg:py-[150px];
+}
+
+@layer components {
+    .product-card {
+        @apply flex
+    }
+
+    .mobile-menu {
+        @apply fixed top-[95px] right-0 z-40 translate-x-[100%] bg-white w-[65vw] h-screen flex flex-col
+        place-items-center text-3xl text-primary shadow-custom3
+        transition-transform duration-[.8s] ease-menuMobile
+    }
+
+    .mobile-menu-link {
+        @apply w-full h-[100px] border-t-[1px] text-xl border-white/20 flex place-content-center 
+        place-items-center
+    }
+
+    .mini-card {
+        @apply flex flex-col items-center gap-2 w-24
+    }
+}
