@@ -90,4 +90,14 @@ h4 {
     .mini-card {
         @apply flex flex-col items-center gap-2 w-24 sm:w-32
     }
+
+    .nav-display {
+        @apply flex px-5 py-3 bg-white place-items-center sticky top-[-1px] shadow-custom1 z-40
+        lg:flex lg:place-content-between lg:pr-20
+    }
+
+    .link {
+        @apply text-primary hover:font-extrabold no-underline
+        transition-all duration-[.3s] ease-in-out
+    }
 }

@@ -27,10 +27,11 @@ export default {
                 custom3: '-8px 10px 17px rgba(78, 78, 78, 0.08)',
             },
             dropShadow: {
-                'xs': '1px 1px 1px black'
+                'xs': '1px 1px 1px black',
+                'prueba': '1px 1px black'
             },
             backgroundImage: {
-                mainImage: 'url(background.jpg)',
+                mainImage: 'url(../src/assets/background.jpg)',
             },
             backgroundSize: {
                 mainSize: '200%',

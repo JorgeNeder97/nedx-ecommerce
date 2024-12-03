@@ -12,7 +12,7 @@ export const Nav = () => {
     }
 
     return (
-        <div className="flex px-5 py-3 bg-white place-items-center sticky top-[-1px] shadow-custom1 z-40">
+        <div className="nav-display">
             <Link to="/">
                 <img src={Logo} alt="NEDX" className="w-[100px] pt-[3px]" />
             </Link>
@@ -46,6 +46,11 @@ export const Nav = () => {
                 <Link to="/" className="mobile-menu-link">Productos</Link>
                 <Link to="/" className="mobile-menu-link">Contacto</Link>
                 <Link to="/" className="mobile-menu-link">Ingresar</Link>
+            </div>
+            <div className="hidden lg:flex lg:gap-10 lg:relative">
+                <Link to="/" className="link text-[18px] absolute top-[-15px] right-[290px]">Productos</Link>
+                <Link to="/" className="link text-[18px] absolute top-[-15px] right-[175px]">Contacto</Link>
+                <Link to="/" className="link text-[18px] absolute top-[-15px] right-[60px]">Ingresar</Link>
             </div>
         </div>
     );
