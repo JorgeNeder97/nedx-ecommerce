@@ -25,12 +25,12 @@ export const ProductsHero = () => {
     }, []);
 
     return (
-        <div className="w-screen h-[300px] relative">
-            <img src={Background} alt="NEDX" className="absolute h-[300px] object-cover filter brightness-[.85] z-[-1px]" />
-            <h3 className="absolute top-[60px] left-3 w-[60%] text-white z-10 drop-shadow-xs productsHero-title">
+        <div className="w-screen h-[300px] sm:h-[730px] relative">
+            <img src={Background} alt="NEDX" className="absolute h-[300px] sm:h-[730px] object-cover filter brightness-[.85] z-[-1px]" />
+            <h3 className="absolute top-[60px] sm:top-[100px] sm:text-[42px] left-3 w-[57%] sm:w-[53%] text-white z-10 drop-shadow-xs productsHero-title">
                 Cada prenda cuenta una historia. ¿Cuál será la tuya?
             </h3>
-            <Link to="/" className="btn absolute top-[180px] left-5 text-white z-10 drop-shadow-xs productsHero-text">
+            <Link to="/" className="btn sm:text-[20px] sm:px-7 sm:h-16 absolute top-[180px] sm:top-[500px] left-5 sm:left-8 md:left-16 text-white z-10 drop-shadow-xs productsHero-text">
                 Ver Productos
             </Link>
         </div>

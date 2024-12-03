@@ -39,7 +39,7 @@ export default {
                 menuMobile: 'cubic-bezier(.65,.13,.22,.97)'
             },
             screens: {
-                tablet: '530px',
+                sm: '530px',
             }
         },
     },
