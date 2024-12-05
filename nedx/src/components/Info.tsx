@@ -8,7 +8,7 @@ export const Info = () => {
             origin: 'bottom',
             duration: 2000,
             distance: '30px',
-            delay: 900,
+            delay: 0,
             reset: false,
         });
 

@@ -3,6 +3,7 @@ import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
+import tailwindcss from 'eslint-plugin-tailwindcss';
 
 export default tseslint.config(
   { ignores: ['dist'] },
@@ -23,6 +24,8 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
+      'tailwindcss/classnames-order': 'no',
+      'tailwindcss/no-custom-classname': 'off',
     },
   },
 )

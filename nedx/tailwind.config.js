@@ -20,6 +20,7 @@ export default {
             },
             fontFamily: {
                 primary: 'Poppins',
+                secondary: 'Rock Salt',
             },
             boxShadow: {
                 custom1: '8px 2px 48px 8px rgba(78, 78, 78, 0.08)',

@@ -20,7 +20,7 @@ export const ProductsHero = () => {
         });
         sr.reveal('.productsHero-text', {
             origin: 'left',
-            delay: 1500,
+            delay: 1000,
         });
     }, []);
 
@@ -30,7 +30,7 @@ export const ProductsHero = () => {
             <h3 className="absolute top-[60px] sm:top-[100px] sm:text-[42px] lg:text-[46px] left-3 lg:left-20 w-[57%] sm:w-[53%] lg:w-[600px] text-white z-10 drop-shadow-xs productsHero-title">
                 Cada prenda cuenta una historia. ¿Cuál será la tuya?
             </h3>
-            <Link to="/" className="btn text-[12px] sm:text-[20px] lg:text-[16px] sm:px-7 sm:h-16 absolute top-[180px] sm:top-[500px] lg:top-[450px] left-5 sm:left-8 md:left-16 lg:left-[85px] text-white z-10 drop-shadow-xs productsHero-text">
+            <Link to="/products" className="btn text-[12px] sm:text-[20px] lg:text-[16px] sm:px-7 sm:h-16 absolute top-[180px] sm:top-[500px] lg:top-[450px] left-5 sm:left-8 md:left-16 lg:left-[85px] text-white z-10 drop-shadow-xs productsHero-text">
                 Ver Productos
             </Link>
         </div>
