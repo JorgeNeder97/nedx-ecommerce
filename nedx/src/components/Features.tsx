@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 
 export const Features = () => {
-    
+
     useEffect(() => {
         const sr = ScrollReveal({
             origin: 'bottom',
@@ -16,13 +16,35 @@ export const Features = () => {
             reset: false,
         });
 
-        sr.reveal('.firstTitle', { origin: 'left' });
-        sr.reveal('.divider', { origin: 'left' });
-        sr.reveal('.secondTitle', { origin: 'right' });
-        sr.reveal('.thirdTitle', { origin: 'top', delay: 300 });
-        if(window.innerWidth < 1024) {
+        const innerWidth = window.innerWidth;
+        const innerHeight = window.innerHeight;
+
+        if(innerWidth < 1024) {
             sr.reveal('.featureCardOne, .featureCardTwo');
+            if(innerHeight < 689) {
+                sr.reveal('.firstTitle', { origin: 'left' });
+                sr.reveal('.divider', { origin: 'left' });
+                sr.reveal('.secondTitle', { origin: 'right' });
+                sr.reveal('.thirdTitle', { origin: 'top' });
+            } else if(innerHeight >= 798) {
+                sr.reveal('.firstTitle', { origin: 'left', delay: 2300 });
+                sr.reveal('.divider', { origin: 'left', delay: 2300 });
+                sr.reveal('.secondTitle', { origin: 'right', delay: 2300 });
+                sr.reveal('.thirdTitle', { origin: 'top', delay: 2900});
+            }
+            else if(innerHeight >= 689) {
+                if(innerHeight < 798) {
+                    sr.reveal('.firstTitle', { origin: 'left', delay: 2300 });
+                    sr.reveal('.divider', { origin: 'left', delay: 2300 });
+                    sr.reveal('.secondTitle', { origin: 'right', delay: 2300 });
+                    sr.reveal('.thirdTitle', { origin: 'top', delay: 0});
+                }
+            }
         } else {
+            sr.reveal('.firstTitle', { origin: 'left' });
+            sr.reveal('.divider', { origin: 'left' });
+            sr.reveal('.secondTitle', { origin: 'right' });
+            sr.reveal('.thirdTitle', { origin: 'top', delay: 300 });
             sr.reveal('.featureCardOne', { origin: 'right', delay: 0 });
             sr.reveal('.featureCardTwo', { origin: 'left', delay: 0 });
         }
@@ -30,7 +52,7 @@ export const Features = () => {
 
     return (
         // Contenedor General
-        <div className="bg-black py-[50px] px-[30px] lg:pt-[180px] lg:pb-[100px] flex flex-col gap-[100px] lg:gap-[200px]">
+        <div className="bg-black py-[50px] px-[20px] lg:pt-[180px] lg:pb-[100px] flex flex-col gap-[100px] lg:gap-[200px]">
             {/* Contenedor de titulos */}
             <div className="flex flex-col gap-[100px] lg:gap-[180px]">
                 <div className="flex flex-col gap-[5px]">

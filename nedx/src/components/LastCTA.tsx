@@ -8,7 +8,7 @@ export const LastCTA = () => {
     useEffect(() => {
         const sr = ScrollReveal({
             origin: 'left',
-            duration: 3000,
+            duration: 2500,
             distance: '60px',
             delay: 300,
             reset: false,
@@ -19,10 +19,10 @@ export const LastCTA = () => {
             delay: 0,
         });
         sr.reveal('.LastCTA-subtitle', {
-            delay: 500,
+            delay: 50,
         });
         sr.reveal('.LastCTA', {
-            delay: 800,
+            delay: 100,
         });
     }, []);
 

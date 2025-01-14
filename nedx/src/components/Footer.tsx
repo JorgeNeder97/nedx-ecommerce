@@ -3,6 +3,15 @@ import DevLogo from '#assets/MyLogo.png';
 import { Link } from 'react-router-dom';
 
 export const Footer = () => {
+
+    const scrollUp = () => {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
+    }
+
     return (
         <div className="bg-black flex flex-col gap-[40px] lg:flex-row py-8 px-8 lg:px-16 pb-14 w-screen place-content-between place-items-center relative">
             <div className="flex flex-col items-center gap-[15px] lg:max-w-[30%] order-1">
@@ -15,7 +24,7 @@ export const Footer = () => {
             </div>
             <div className="order-3 lg:order-2">
                 <Link to="/">
-                    <img src={Logo} alt="NedX Style" className="h-[80px]" />
+                    <img src={Logo} alt="NedX Style" className="h-[80px]" onClick={scrollUp} />
                 </Link>
             </div>
             <div className="order-2 lg:order-3 flex gap-[5px] place-items-center">

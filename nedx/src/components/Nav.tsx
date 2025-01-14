@@ -16,7 +16,7 @@ export const Nav = () => {
             <Link to="/">
                 <img src={Logo} alt="NEDX" className="w-[80px] pt-[3px] outline-none" />
             </Link>
-            <label className="absolute top-[25px] right-5 z-50 swap swap-rotate lg:hidden outline-none">
+            <label className="absolute top-[20px] right-5 z-50 swap swap-rotate lg:hidden outline-none">
                 {/* this hidden checkbox controls the state */}
                 <input type="checkbox" onChange={handleButtonChange} />
 
