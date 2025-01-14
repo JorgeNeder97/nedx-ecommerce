@@ -14,15 +14,15 @@ export const Nav = () => {
     return (
         <div className="nav-display">
             <Link to="/">
-                <img src={Logo} alt="NEDX" className="w-[100px] pt-[3px]" />
+                <img src={Logo} alt="NEDX" className="w-[80px] pt-[3px] outline-none" />
             </Link>
-            <label className="absolute top-[25px] right-5 z-50 swap swap-rotate lg:hidden">
+            <label className="absolute top-[25px] right-5 z-50 swap swap-rotate lg:hidden outline-none">
                 {/* this hidden checkbox controls the state */}
                 <input type="checkbox" onChange={handleButtonChange} />
 
                 {/* hamburger icon */}
                 <svg
-                    className="swap-off fill-black duration-[.2s]"
+                    className="swap-off fill-white duration-[.2s] outline-none"
                     xmlns="http://www.w3.org/2000/svg"
                     width="45"
                     height="45"
@@ -33,7 +33,7 @@ export const Nav = () => {
 
                 {/* close icon */}
                 <svg
-                    className="swap-on fill-black duration-[.2s]"
+                    className="swap-on fill-white duration-[.2s] outline-none"
                     xmlns="http://www.w3.org/2000/svg"
                     width="45"
                     height="45"
@@ -48,9 +48,9 @@ export const Nav = () => {
                 <Link to="/" className="mobile-menu-link">Ingresar</Link>
             </div>
             <div className="hidden lg:flex lg:gap-10 lg:relative">
-                <Link to="/products" className="link text-[18px] absolute top-[-15px] right-[290px]">Productos</Link>
-                <Link to="/" className="link text-[18px] absolute top-[-15px] right-[175px]">Contacto</Link>
-                <Link to="/" className="link text-[18px] absolute top-[-15px] right-[60px]">Ingresar</Link>
+                <Link to="/products" className="link drop-shadow-xs text-[18px] absolute top-[-15px] right-[260px] hover:right-[255px]">Productos</Link>
+                <Link to="/" className="link drop-shadow-xs text-[18px] absolute top-[-15px] right-[145px] hover:right-[135px]">Contacto</Link>
+                <Link to="/" className="link drop-shadow-xs text-[18px] absolute top-[-15px] right-[30px] hover:right-[25px]">Ingresar</Link>
             </div>
         </div>
     );

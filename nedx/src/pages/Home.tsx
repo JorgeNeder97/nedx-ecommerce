@@ -1,14 +1,17 @@
-import { Banner } from "#components/Banner.tsx";
+import { LastCTA } from "#components/LastCTA.tsx";
+import { Features } from "#components/Features.tsx";
 import { Footer } from "#components/Footer.tsx";
-import { Info } from "#components/Info.tsx";
+import { Benefits } from "#components/Benefits.tsx";
 import { Loading } from "#components/Loading.tsx";
 import { Nav } from "#components/Nav.tsx";
 import { ProductsHero } from "#components/ProductsHero.tsx";
 import usePageLoad from "#hooks/usePageLoad.ts";
 import { useRef, useEffect } from "react";
-
+import useScrollToTop from "#hooks/useScrollToTop.ts";
 
 export const Home = () => {
+
+    useScrollToTop();
     const { isLoading, observeImages } = usePageLoad();
 
     const bannerRef = useRef<HTMLDivElement>(null);
@@ -22,7 +25,7 @@ export const Home = () => {
             observeImages(bannerImages);
             observeImages(productsHeroImages);
         }
-    }, [observeImages])
+    }, [observeImages]);
 
     if (isLoading) {
         return <Loading />;
@@ -30,12 +33,13 @@ export const Home = () => {
         return (
             <div>
                 <Nav />
-                <div ref={bannerRef}>
-                    <Banner />
-                </div>
-                <Info />
                 <div ref={productsHeroRef}>
                     <ProductsHero />
+                </div>
+                <Features />
+                <Benefits />
+                <div ref={bannerRef}>
+                    <LastCTA />
                 </div>
                 <Footer />
             </div>

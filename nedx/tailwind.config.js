@@ -1,4 +1,6 @@
 import daisyui from 'daisyui';
+import { gridAreas } from 'tailwindcss-grid-areas';
+
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
@@ -17,6 +19,7 @@ export default {
                     tertiary: '#FFE300'
                 },
                 gray: '#E8E8E8',
+                black: '#0D0D0D',
             },
             fontFamily: {
                 primary: 'Poppins',
@@ -29,7 +32,7 @@ export default {
             },
             dropShadow: {
                 'xs': '1px 1px 1px black',
-                'prueba': '1px 1px black'
+                'hero': '4px 4px 4px rgba(0, 0, 0, .55)'
             },
             backgroundImage: {
                 mainImage: 'url(../src/assets/background.jpg)',
@@ -42,11 +45,15 @@ export default {
             },
             screens: {
                 sm: '530px',
-            }
+            },
+            gridTemplateAreas: {
+                layout: ["Title", "Image", "Text"],
+            },
         },
     },
     plugins: [
         daisyui,
+        gridAreas()
     ],
     daisyui: {
         base: false,

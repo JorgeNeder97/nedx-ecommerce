@@ -31,9 +31,8 @@ h4 {
     @apply text-[20px] lg:text-[26px] font-semibold capitalize;
 }
 
-.btn {
-    @apply rounded-full uppercase tracking-[1.02px] flex items-center justify-center
-    transition-all;
+.btn-X {
+    @apply rounded-full uppercase tracking-[1.02px] flex items-center justify-center;
 }
 
 .btn-sm {
@@ -77,8 +76,8 @@ h4 {
     }
 
     .mobile-menu {
-        @apply fixed top-[95px] right-0 z-40 translate-x-[100%] bg-white w-[65vw] max-w-[400px] h-screen flex flex-col
-        place-items-center text-3xl text-primary shadow-custom3
+        @apply fixed top-[83px] right-0 z-40 translate-x-[100%] bg-black/90 w-[65vw] max-w-[400px] h-screen flex flex-col
+        place-items-center text-3xl text-tertiary shadow-custom3
         transition-transform duration-[.8s] ease-menuMobile
     }
 
@@ -92,12 +91,22 @@ h4 {
     }
 
     .nav-display {
-        @apply flex px-5 py-3 bg-white place-items-center sticky top-[-1px] shadow-custom1 z-40
+        @apply flex pl-10 py-3 bg-black/80 place-items-center sticky top-[-1px] shadow-custom1 z-40
         lg:flex lg:place-content-between lg:pr-20
     }
 
     .link {
-        @apply text-primary hover:font-extrabold no-underline
+        @apply text-tertiary hover:text-[22px] no-underline outline-none
         transition-all duration-[.3s] ease-in-out
+    }
+
+    .featureCardOne {
+        @apply max-w-[500px] lg:max-w-[900px] grid grid-cols-1 grid-rows-[auto,1fr,auto] grid-areas-[Title,Image,Text] gap-[15px]
+        lg:grid-cols-2 lg:grid-rows-[auto,auto] lg:grid-areas-[Image_Title,Image_Text] lg:gap-[30px] lg:gap-x-[80px]
+    }
+
+    .featureCardTwo {
+        @apply max-w-[500px] lg:max-w-[900px] grid grid-cols-1 grid-rows-[auto,1fr,auto] grid-areas-[Title,Image,Text] gap-[15px]
+        lg:grid-cols-2 lg:grid-rows-[auto,auto] lg:grid-areas-[Title_Image,Text_Image] lg:gap-[30px] lg:gap-x-[80px]
     }
 }

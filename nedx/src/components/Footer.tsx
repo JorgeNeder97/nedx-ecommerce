@@ -1,19 +1,28 @@
-import fc from '#assets/facebook.png';
-import inst from '#assets/instagram.png';
-import tt from '#assets/tik-tok.png';
+import Logo from '#assets/Logo.png';
+import DevLogo from '#assets/MyLogo.png';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
     return (
-        <div className="bg-white/20 flex flex-col py-10 sm:py-16 relative">
-            <div className="flex flex-col items-center gap-5">
-                <p className="text-white text-center text-[20px] sm:text-[26px]">Seguinos en nuestras Redes</p>
-                <div className="flex w-[200px] sm:w-[350px] place-content-around">
-                    <img src={inst} alt="" className="w-[40px] sm:w-[50px] hover:cursor-pointer" />
-                    <img src={fc} alt="" className="w-[40px] sm:w-[50px] hover:cursor-pointer" />
-                    <img src={tt} alt="" className="w-[40px] sm:w-[50px] hover:cursor-pointer" />
+        <div className="bg-black flex flex-col gap-[40px] lg:flex-row py-8 px-8 lg:px-16 pb-14 w-screen place-content-between place-items-center relative">
+            <div className="flex flex-col items-center gap-[15px] lg:max-w-[30%] order-1">
+                <p className="text-white text-center text-normal sm:text-[18px] lg:text-[18px]">Seguinos en nuestras Redes</p>
+                <div className="flex w-[200px] place-content-around">
+                    <i className="fa-brands fa-square-facebook text-[30px] sm:text-[40px] text-zinc-400 transition-all duration-[.3s] ease-in-out hover:text-white hover:cursor-pointer "></i>
+                    <i className="fa-brands fa-instagram text-[30px] sm:text-[40px] text-zinc-400 transition-all duration-[.3s] ease-in-out hover:text-white hover:cursor-pointer "></i>
+                    <i className="fa-brands fa-linkedin text-[30px] sm:text-[40px] text-zinc-400 transition-all duration-[.3s] ease-in-out hover:text-white hover:cursor-pointer "></i>
                 </div>
             </div>
-            <p className="absolute bottom-0 right-3 text-[11px] sm:text-[14px]">Copyright © 2024 Nedx Style. Todos los derechos reservados.</p>
+            <div className="order-3 lg:order-2">
+                <Link to="/">
+                    <img src={Logo} alt="NedX Style" className="h-[80px]" />
+                </Link>
+            </div>
+            <div className="order-2 lg:order-3 flex gap-[5px] place-items-center">
+                <p className="text-left text-sm w-[100px]">Developed & Designed by</p>
+                <img src={DevLogo} alt="Developer & Designer" className="w-[150px] object-cover" />
+            </div>
+            <p className="absolute bottom-0 right-5 text-[10px] sm:text-[11px]">© 2025 Nedx Style. Todos los derechos reservados.</p>
         </div>
     );
 };
