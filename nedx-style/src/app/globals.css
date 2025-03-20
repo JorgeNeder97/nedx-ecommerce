@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* Al utilizar "inline" debemos utilizar un ; (punto y coma) al final de cada variable y no una , (coma) */
+@theme inline {
+    --color-primary: #2F2F2F;
+    --color-secondary: #C2C2C2;
+    --color-tertiary: #FBFBFB;
+    --color-accent: #FFD200;
+    --color-accent-secondary: #ECC200;
+    --color-accent-tertiary: #FFE300;
+    --color-gray: #E8E8E8;
+    --color-black: #0D0D0D;
+
+    --shadow-c1: '8px 2px 48px 8px rgba(78, 78, 78, 0.08)';
+    --shadow-c2: '8px 8px 38px 8px rgba(81, 73, 8, 0.06)';
+    --shadow-c3: '-8px 10px 17px rgba(78, 78, 78, 0.08)';
+
+    --drop-shadow-xs: '1px 1px 1px black';
+    --drop-shadow-hero: '4px 4px 4px rgba(0, 0, 0, .55)';
+}
+
+
+/* .product-card {
+    @apply flex;
+} */
+
+/* .mobile-menu {
+    @apply fixed top-[83px] right-0 z-40 translate-x-[100%] bg-black/90 w-[65vw] max-w-[400px] h-screen flex flex-col
+place-items-center text-3xl text-tertiary shadow-c3
+transition-transform duration-[.8s] ease-menuMobile;
+}
+
+.mobile-menu-link {
+    @apply w-full h-[100px] border-t-[1px] text-xl sm:text-[26px] border-white/20 flex place-content-center 
+place-items-center;
+} */
+
+/* .mini-card {
+    @apply flex flex-col items-center gap-2 w-24 sm:w-32;
+} */
+
+/* .nav-display {
+    @apply flex pl-10 py-3 bg-black/80 place-items-center sticky top-[-1px] shadow-custom1 z-40
+lg:flex lg:place-content-between lg:pr-20;
+}
+
+.link {
+    @apply text-tertiary hover:text-[22px] no-underline outline-none
+transition-all duration-[.3s] ease-in-out;
+} */
+
+/* .featureCardOne {
+    @apply max-w-[500px] lg:max-w-[900px] grid grid-cols-1 grid-rows-[auto,1fr,auto] grid-areas-[Title,Image,Text] gap-[15px]
+lg:grid-cols-2 lg:grid-rows-[auto,auto] lg:grid-areas-[Image_Title,Image_Text] lg:gap-[30px] lg:gap-x-[80px];
+}
+
+.featureCardTwo {
+    @apply max-w-[500px] lg:max-w-[900px] grid grid-cols-1 grid-rows-[auto,1fr,auto] grid-areas-[Title,Image,Text] gap-[15px]
+lg:grid-cols-2 lg:grid-rows-[auto,auto] lg:grid-areas-[Title_Image,Text_Image] lg:gap-[30px] lg:gap-x-[80px];
+} */
